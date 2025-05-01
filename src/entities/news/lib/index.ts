@@ -1,0 +1,1 @@
+export { newsDataAdapter } from './newsDataAdapter';

@@ -4,14 +4,13 @@ export const Comments: CollectionConfig = {
   slug: 'comments',
   access: {
     read: ({ req }) => {
-      // Только одобренные комментарии видны всем
       return {
         approved: {
           equals: true,
         },
       };
     },
-    create: () => true, // Разрешить всем (в том числе неавторизованным)
+    create: () => true,
     update: ({ req }) => req.user?.role === 'admin',
     delete: ({ req }) => req.user?.role === 'admin',
   },

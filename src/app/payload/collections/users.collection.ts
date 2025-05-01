@@ -1,6 +1,6 @@
-import type { CollectionConfig } from 'payload'
+import type { CollectionConfig } from 'payload';
 
-export const Users: CollectionConfig = {
+export const UsersCollection: CollectionConfig = {
   slug: 'users',
   admin: {
     useAsTitle: 'email',
@@ -36,4 +36,4 @@ export const Users: CollectionConfig = {
       ],
     },
   ],
-}
+};

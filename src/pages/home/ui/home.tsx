@@ -8,7 +8,7 @@ import { useTranslation } from 'react-i18next';
 
 import Style from './home.module.sass';
 
-const Home = () => {
+export const Home = () => {
   const { t, i18n } = useTranslation();
 
   return (
@@ -33,5 +33,3 @@ const Home = () => {
     </div>
   );
 };
-
-export default Home;

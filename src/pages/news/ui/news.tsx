@@ -2,23 +2,19 @@
 
 import { FC } from 'react';
 
+import { News as NewsType } from '@/app/payload/payload-types';
 import { NewsList } from '@/entities/news';
-import { News as NewsType } from '@/shared/configs/payload/payload-types';
 import { LanguageChanger } from '@/shared/ui';
-import { useTranslation } from 'react-i18next';
+import { Container } from '@mui/material';
 
 interface NewsProps {
   data: Array<NewsType>;
 }
 
-export const News: FC<NewsProps> = ({ data }) => {
-  const { t } = useTranslation();
+export const News: FC<NewsProps> = ({ data }) => (
+  <Container>
+    <LanguageChanger />
 
-  return (
-    <div className="wrapper">
-      <LanguageChanger />
-
-      <NewsList data={data} />
-    </div>
-  );
-};
+    <NewsList data={data} />
+  </Container>
+);

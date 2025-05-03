@@ -11,8 +11,6 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import { useTranslation } from 'react-i18next';
 
-import Style from './home.module.sass';
-
 export const Home = () => {
   const { t, i18n } = useTranslation();
 

@@ -1,5 +1,5 @@
 // storage-adapter-import-placeholder
-import { NewsCollection } from '@/entities/news';
+import { ArticlesCollection } from '@/entities/article';
 import { mongooseAdapter } from '@payloadcms/db-mongodb';
 import { payloadCloudPlugin } from '@payloadcms/payload-cloud';
 import { lexicalEditor } from '@payloadcms/richtext-lexical';
@@ -21,7 +21,7 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
-  collections: [UsersCollection, MediaCollection, NewsCollection],
+  collections: [UsersCollection, MediaCollection, ArticlesCollection],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {

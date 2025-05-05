@@ -1,12 +1,14 @@
+'use client';
+
 import { FC } from 'react';
 
-import { Card, CardActionArea, CardContent, CardMedia, Typography } from '@mui/material';
+import { Button, Card, CardActionArea, CardContent, CardMedia, Typography } from '@mui/material';
 
-import { NewsPreviewProps } from './news-preview.type';
+import { ArticlePreviewProps } from '../model/article-types';
 
-const NewsPreview: FC<NewsPreviewProps> = ({ id, body, title, imageUrl }) => (
-  <Card component="article">
-    <CardActionArea href="/news/slug">
+const ArticlePreview: FC<ArticlePreviewProps> = ({ id, title, body, link, imageUrl }) => (
+  <Card id={id} component="article">
+    <CardActionArea href={link}>
       {imageUrl && <CardMedia component="img" height="140" image={imageUrl} alt={title} />}
 
       <CardContent>
@@ -17,9 +19,11 @@ const NewsPreview: FC<NewsPreviewProps> = ({ id, body, title, imageUrl }) => (
         <Typography variant="subtitle2" color="text.secondary">
           {body}
         </Typography>
+
+        <Button>More info</Button>
       </CardContent>
     </CardActionArea>
   </Card>
 );
 
-export default NewsPreview;
+export default ArticlePreview;

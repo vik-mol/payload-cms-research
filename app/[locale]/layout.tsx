@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 
+import { QueryProvider } from '@/app/providers/query-provider';
 import i18nConfig from '@/shared/configs/i18n/i18nConfig';
 import { Locales } from '@/shared/types';
 import { CssBaseline } from '@mui/material';
@@ -24,7 +25,9 @@ export default async function RootLayout(props: RootLayoutProps) {
   return (
     <html lang="en">
       <CssBaseline />
-      <body>{children}</body>
+      <body>
+        <QueryProvider>{children}</QueryProvider>
+      </body>
     </html>
   );
 }

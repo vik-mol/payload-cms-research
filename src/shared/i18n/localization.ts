@@ -1,4 +1,4 @@
-const localization = {
+export const localization = {
   defaultLocale: 'en',
   locales: [
     {
@@ -12,4 +12,3 @@ const localization = {
   ],
 };
 
-export default localization;

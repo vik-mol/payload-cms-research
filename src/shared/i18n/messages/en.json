@@ -1,0 +1,8 @@
+{
+  "HomePage": {
+    "greeting": "News section powered by Payload 3"
+  },
+  "NewsPage": {
+    "greeting": "News section powered by Payload 3"
+  }
+}

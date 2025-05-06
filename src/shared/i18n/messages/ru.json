@@ -1,0 +1,8 @@
+{
+  "HomePage": {
+    "greeting": "Раздел новостей под управлением Payload 3"
+  },
+  "NewsPage": {
+    "greeting": "Раздел новостей под управлением Payload 3"
+  }
+}

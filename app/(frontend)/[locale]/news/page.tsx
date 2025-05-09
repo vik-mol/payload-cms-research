@@ -1,11 +1,11 @@
-import { getTranslations } from 'next-intl/server';
+import { NewsPage } from '@/pages/news/news-page';
+import { Locale, PageProps } from '@/shared/types';
+import { FC } from 'react';
 
-export default async function News() {
-  const t = await getTranslations();
+const News: FC<PageProps> = async ({ params }) => {
+  const { locale } = await params;
+console.log('render')
+  return <NewsPage locale={locale} />
+};
 
-  return (
-    <div>
-      <h1>{t('HomePage.greeting')}</h1>
-    </div>
-  );
-}
+export default News;
